@@ -40,6 +40,16 @@
 
 ## [Инструменты для работы с базами данных](/GB_SQL/001/001.md)
 
++ [Что мы узнаем](/GB_SQL/001/001.md#что-мы-узнаем)
++ [Термины лекции](/GB_SQL/001/001.md#термины-лекции)
++ [Поговорим о реляционных базах данных(БД)](/GB_SQL/001/001.md#поговорим-о-реляционных-базах-данныхбд)
++ [Основные операторы SQL](/GB_SQL/001/001.md#основные-операторы-sql)
+    + [DDL (Data Definition Language)](/GB_SQL/001/001.md#ddl-data-definition-language)
+    + [DML (Data Manipulation Language)](/GB_SQL/001/001.md#dml-data-manipulation-language)
+    + [DCL (Data Control Language)](/GB_SQL/001/001.md#dcl-data-control-language)
+    + [TCL (Transaction Control Language)](/GB_SQL/001/001.md#tcl-transaction-control-language)
++ [Основные компоненты СУБД](/GB_SQL/001/001.md#основные-компоненты-субд)
+
 [Курс базы данных и SQL. Лекция 2](https://www.notion.so/SQL-2-d8ccb2206c9941b6acd594d06689abb7?pvs=21)
 
 [Курс базы данных и SQL. Лекции 3 и 4](https://www.notion.so/SQL-3-4-24c36a824b2c426db1e9394f098790ba?pvs=21)
