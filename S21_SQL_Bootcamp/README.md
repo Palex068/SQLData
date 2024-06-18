@@ -2,8 +2,12 @@
 
 ## [Start S21_SQL](/S21_SQL_Bootcamp/Srart.md)
 
-## SQL1 Bootcamp. Day00
-Today you will see how relational model works and how to get needed data based on basic constructions of SQL
+
+## [SQL1 Bootcamp. Day00](/S21_SQL_Bootcamp/Day00/README_RUS.md)
+
+|||
+-|-
+Сегодня вы увидите, как работает реляционная модель и как получить необходимые данные на основе базовых конструкций SQL | Today you will see how relational model works and how to get needed data based on basic constructions of SQL
 
 ## SQL1 Bootcamp. Day01
 Today you will see how to get needed data based on sets constructions and simple JOINs

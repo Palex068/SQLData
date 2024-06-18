@@ -119,47 +119,50 @@
 | Language                        | ANSI SQL                                                                                              |
 
 Давайте выполним наше первое задание.
-Пожалуйста, составьте инструкцию select, которая возвращает имена и возраст всех людей из города ‘Казань’.SELECT *
-FROM person
+
+Пожалуйста, составьте инструкцию select, которая возвращает имена и возраст всех людей из города ‘Казань’.
 
 
 ## Chapter V
 ## Exercise 01 - Первые шаги в мире SQL
 
-| Exercise 01: First steps into SQL world |                                                                                                                          |
+| Exercise 01: Первые шаги в мире SQL |                                                                                                                          |
 |---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | Turn-in directory                     | ex01                                                                                                                     |
 | Files to turn-in                      | `day00_ex01.sql`                                                                                 |
 | **Allowed**                               |                                                                                                                          |
 | Language                        | ANSI SQL                                                                                              |
 
-Please make a select statement which returns names , ages for all women from the city ‘Kazan’. Yep, and please sort result by name.
+Пожалуйста, введите запрос select, который вернет имена и возраст всех женщин из города Казань. Да, и, пожалуйста, отсортируйте результат по имени.
 
 ## Chapter VI
-## Exercise 02 - First steps into SQL world
+## Exercise 02 - Первые шаги в мире SQL
 
-| Exercise 02: First steps into SQL world |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex02                                                                                                                     |
-| Files to turn-in                      | `day00_ex02.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 02: Первые шаги в мире SQL | |
+|-|-|
+| Turn-in directory | ex02 |
+| Files to turn-in | `day00_ex02.sql` |
+| **Allowed** | |
+| Language | ANSI SQL |
 
-Please make 2 syntax different select statements which return a list of pizzerias (pizzeria name and rating) with rating between 3.5 and 5 points (including limit points) and ordered by pizzeria rating.
-- the 1st select statement must contain comparison signs  (<=, >=);
-- the 2nd select statement must contain `BETWEEN` keyword.
+Пожалуйста, составьте 2 инструкции select с разным синтаксисом, которые возвращают список пиццерий (название пиццерии и рейтинг) с рейтингом от 3,5 до 5 баллов (включая предельные баллы) и упорядоченных по рейтингу пиццерий.
+- первый оператор select должен содержать знаки сравнения (<=, >=);
+- второй оператор select должен содержать ключевое слово `BETWEEN`.
+
 
 ## Chapter VII
-## Exercise 03 - First steps into SQL world
+## Exercise 03 - Первые шаги в мире SQL
 
-| Exercise 03: First steps into SQL world |                                                                                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| Turn-in directory                     | ex03                                                                                                                     |
-| Files to turn-in                      | `day00_ex03.sql`                                                                                 |
-| **Allowed**                               |                                                                                                                          |
-| Language                        | ANSI SQL                                                                                              |
+| Exercise 03: Первые шаги в мире SQL | |
+|-|-|
+| Turn-in directory  |  ex03 |
+| Files to turn-in | `day00_ex03.sql` |
+| **Allowed**  | |
+| Language  | ANSI SQL |
 
-Please make a select statement that returns the person identifiers (without duplicates) who visited pizzerias in a period from January 6, 2022 to January 9, 2022 (including all days) or visited pizzerias with identifier 2. Also include ordering clause by person identifier in descending mode.
+|||
+-|-
+Please make a select statement that returns the person identifiers (without duplicates) who visited pizzerias in a period from January 6, 2022 to January 9, 2022 (including all days) or visited pizzerias with identifier 2. Also include ordering clause by person identifier in descending mode. | Пожалуйста, заполните запрос, в котором будут указаны идентификаторы пользователей (без дублирования), которые посещали пиццерии в период с 6 по 9 января 2022 года (включая все дни) или посещали пиццерии с идентификатором 2. Также включите предложение о упорядочении по идентификатору пользователя в режиме убывания.
 
 ## Chapter VIII
 ## Exercise 04 - First steps into SQL world
