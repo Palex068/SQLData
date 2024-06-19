@@ -2,4 +2,4 @@
 
 Курс [тут](https://stepik.org/course/63054/syllabus)
 
-## [1. Основы реляционной модели и SQL]
+## [1. Основы реляционной модели и SQL](/SQL_Simulator/01.md)
