@@ -191,13 +191,322 @@
 --     author DESC,
 --     title ASC;
 --
-SELECT
-    title,
-    author
-FROM
-    book
-WHERE
-    title LIKE "%_ _%"
-    AND author LIKE "%С.%"
-ORDER BY
-    title;
+-- SELECT
+--     title,
+--     author
+-- FROM
+--     book
+-- WHERE
+--     title LIKE "%_ _%"
+--     AND author LIKE "%С.%"
+-- ORDER BY
+--     title;
+--
+-- SELECT
+--     amount
+-- FROM
+--     book
+-- GROUP BY
+--     amount
+--
+-- SELECT
+--     author AS Автор,
+--     COUNT(title) AS Различных_книг,
+--     SUM(amount) AS Количество_экземпляров
+-- FROM
+--     book
+-- GROUP BY
+--     author;
+--
+-- SELECT
+--     author,
+--     MIN(price) AS Минимальная_цена,
+--     MAX(price) AS Максимальная_цена,
+--     AVG(price) AS Средняя_цена
+-- FROM
+--     book
+-- GROUP BY
+--     author;
+--
+-- SELECT
+--     author,
+--     ROUND(SUM(price * amount), 2) AS Стоимость,
+--     ROUND(SUM(price * amount) * 18 / 118, 2) AS НДС,
+--     ROUND(SUM(price * amount) / 1.18, 2) AS Стоимость_без_НДС
+-- FROM
+--     book
+-- GROUP BY
+--     author;
+--
+-- SELECT
+--     ROUND(AVG(price), 2) AS Средняя_цена,
+--     ROUND(SUM(price * amount), 2) AS Стоимость
+-- FROM
+--     book
+-- WHERE
+--     amount BETWEEN 5
+--     AND 14;
+--
+-- SELECT
+--     author,
+--     ROUND(SUM(price * amount), 2) AS Стоимость
+-- FROM
+--     book
+-- WHERE
+--     title <> 'Идиот'
+--     AND title <> 'Белая гвардия'
+-- GROUP BY
+--     author
+-- HAVING
+--     SUM(price * amount) > 5000
+-- ORDER BY
+--     Стоимость DESC;
+--
+-- SELECT
+--     author,
+--     title,
+--     price
+-- FROM
+--     book
+-- WHERE
+--     price <= (
+--         SELECT
+--             AVG(price)
+--         FROM
+--             book
+--     )
+-- ORDER BY
+--     price DESC;
+-- SELECT
+--     author,
+--     title,
+--     price
+-- FROM
+--     book
+-- WHERE
+--     price <= (
+--         SELECT
+--             MIN(price)
+--         FROM
+--             book
+--     ) + 150
+-- ORDER BY
+--     price;
+-- промежуточный запрос (вложенный)
+-- SELECT
+--     amount,
+--     COUNT(amount)
+-- FROM
+--     book
+-- GROUP BY
+--     amount
+-- HAVING
+--     COUNT(amount) = 1;
+--
+-- SELECT
+--     author,
+--     title,
+--     price
+-- FROM
+--     book
+-- WHERE
+--     price < ANY (
+--         SELECT
+--             MIN(price)
+--         FROM
+--             book
+--         GROUP BY
+--             author
+--     );
+--
+-- SELECT
+--     title,
+--     author,
+--     amount,
+--     (
+--         SELECT
+--             MAX(amount)
+--         FROM
+--             book
+--     ) - amount AS Заказ
+-- FROM
+--     book
+-- WHERE
+--     amount <> (
+--         SELECT
+--             MAX(amount)
+--         FROM
+--             book
+--     );
+--
+-- CREATE TABLE supply(
+--    supply_id INT PRIMARY KEY AUTO_INCREMENT,
+--        title VARCHAR(50),
+--       author VARCHAR(30),
+--        price DECIMAL(8, 2),
+--       amount INT
+-- );
+--
+-- INSERT INTO
+--     supply (title, author, price, amount)
+-- VALUES
+--     ('Лирика', 'Пастернак Б.Л.', 518.99, 2),
+--     ('Черный человек', 'Есенин С.А.', 570.20, 6),
+--     ('Белая гвардия', 'Булгаков М.А.', 540.50, 7),
+--     ('Идиот', 'Достоевский Ф.М.', 360.80, 3);
+-- SELECT
+--     *
+-- FROM
+--     supply;
+--
+-- INSERT INTO
+--     book (title, author, price, amount)
+-- SELECT
+--     title,
+--     author,
+--     price,
+--     amount
+-- FROM
+--     supply
+-- WHERE
+--     author <> 'Достоевский Ф.М.'
+--     and author <> 'Булгаков М.А.';
+-- SELECT
+--     *
+-- FROM
+--     book;
+--
+-- INSERT INTO book (title, author, price, amount) 
+-- SELECT title, author, price, amount 
+-- FROM supply
+-- WHERE author NOT IN (
+--         SELECT author 
+--         FROM book
+--       );
+-- SELECT * FROM book;
+--
+-- UPDATE
+--     book
+-- SET
+--     price = 0.9 * price
+-- WHERE
+--     amount BETWEEN 5
+--     AND 10;
+-- SELECT
+--     *
+-- FROM
+--     book;
+--
+-- UPDATE
+--     book
+-- SET
+--     buy = IF (amount < buy, amount, buy),
+--     price = IF (buy = 0, price * 0.9, price);
+-- SELECT
+--     *
+-- FROM
+--     book;
+--
+-- UPDATE
+--     book,
+--     supply
+-- SET
+--     book.amount = book.amount + supply.amount,
+--     book.price = (book.price + supply.price) / 2
+-- WHERE
+--     book.title = supply.title
+--     AND book.author = supply.author;
+-- SELECT
+--     *
+-- FROM
+--     book;
+--
+-- DELETE FROM
+--     supply
+-- WHERE
+--     author IN (
+--         SELECT
+--             author
+--         FROM
+--             book
+--         GROUP BY
+--             author
+--         HAVING
+--             SUM(amount) > 10
+--     );
+-- SELECT
+--     *
+-- FROM
+--     supply;
+--
+-- CREATE TABLE ordering AS
+-- SELECT
+--     author,
+--     title,
+--     (
+--         SELECT
+--             ROUND(AVG(amount))
+--         FROM
+--             book
+--     ) AS amount
+-- FROM
+--     book
+-- WHERE
+--     amount < (
+--         SELECT
+--             ROUND(AVG(amount))
+--         FROM
+--             book
+--     );
+-- SELECT
+--     *
+-- FROM
+--     ordering;
+--
+-- CREATE TABLE author(
+--     author_id INT PRIMARY KEY AUTO_INCREMENT,
+--     name_author VARCHAR(50)
+-- );
+--
+-- INSERT INTO
+--     author (name_author)
+-- VALUES
+--     ('Булгаков М.А.'),
+--     ('Достоевский Ф.М.'),
+--     ('Есенин С.А.'),
+--     ('Пастернак Б.Л.');
+-- SELECT
+--     *
+-- FROM
+--     author;
+--
+-- CREATE TABLE book (
+--     book_id INT PRIMARY KEY AUTO_INCREMENT,
+--     title VARCHAR(50),
+--     author_id INT NOT NULL,
+--     genre_id INT,
+--     price DECIMAL(8, 2),
+--     amount INT,
+--     FOREIGN KEY (author_id) REFERENCES author (author_id),
+--     FOREIGN KEY (genre_id) REFERENCES genre (genre_id)
+-- );
+--
+-- CREATE TABLE book (
+--     book_id INT PRIMARY KEY AUTO_INCREMENT,
+--     title VARCHAR(50),
+--     author_id INT NOT NULL,
+--     genre_id INT,
+--     price DECIMAL(8, 2),
+--     amount INT,
+--     FOREIGN KEY (author_id) REFERENCES author (author_id) ON DELETE CASCADE,
+--     FOREIGN KEY (genre_id) REFERENCES genre (genre_id) ON DELETE
+--     SET
+--         NULL
+-- );
+--
+INSERT INTO
+    book(title, author_id, genre_id, price, amount)
+VALUES
+    ('Стихотворения и поэмы', 3, 2, 650.00, 15),
+    ('Черный человек', 3, 2, 570.20, 6),
+    ('Лирика', 4, 2, 518.99, 2);
