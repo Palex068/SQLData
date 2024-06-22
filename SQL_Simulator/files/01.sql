@@ -504,9 +504,79 @@
 --         NULL
 -- );
 --
-INSERT INTO
-    book(title, author_id, genre_id, price, amount)
-VALUES
-    ('Стихотворения и поэмы', 3, 2, 650.00, 15),
-    ('Черный человек', 3, 2, 570.20, 6),
-    ('Лирика', 4, 2, 518.99, 2);
+-- INSERT INTO
+--     book(title, author_id, genre_id, price, amount)
+-- VALUES
+--     ('Стихотворения и поэмы', 3, 2, 650.00, 15),
+--     ('Черный человек', 3, 2, 570.20, 6),
+--     ('Лирика', 4, 2, 518.99, 2);
+--
+-- SELECT
+--     title,
+--     name_genre,
+--     price
+-- FROM
+--     genre
+--     INNER JOIN book ON genre.genre_id = book.genre_id
+-- WHERE
+--     amount > 8
+-- ORDER BY
+--     price DESC;
+--
+-- SELECT
+--     name_genre
+-- FROM
+--     genre
+--     LEFT JOIN book ON genre.genre_id = book.genre_id
+-- WHERE
+--     amount IS NULL;
+--
+-- SELECT
+--     name_city,
+--     name_author,
+--     (
+--         DATE_ADD('2020-01-01', INTERVAL FLOOR(RAND() * 365) DAY)
+--     ) as Дата
+-- FROM
+--     author,
+--     city
+-- ORDER BY
+--     author ASC,
+--     Дата DESC;
+--
+-- SELECT
+--     name_genre,
+--     title,
+--     name_author
+-- FROM
+--     author
+--     INNER JOIN book ON author.author_id = book.author_id
+--     INNER JOIN genre ON genre.genre_id = book.genre_id
+-- WHERE
+--     name_genre = 'Роман'
+-- ORDER BY
+--     title;
+--
+-- SELECT
+--     name_author,
+--     SUM(amount) AS Количество
+-- FROM
+--     author
+--     LEFT JOIN book on author.author_id = book.author_id
+-- GROUP BY
+--     name_author
+-- HAVING
+--     SUM(amount) < 10
+--     OR Количество is NULL
+-- ORDER BY
+--     Количество;
+--
+SELECT
+    name_author
+FROM
+    author
+    INNER JOIN book on author.author_id = book.author_id
+GROUP BY
+    name_author
+HAVING
+    COUNT(DISTINCT genre_id) = 1;
