@@ -1,5 +1,7 @@
 # SQLData
 
+## ["Поколение Python": базы данных и SQL для начинающих](/SQL_for_beginners/README.MD)
+
 ![00](/Lib/01_01.jpg)
 
 ## [GB Базы данных и SQL](/GB_SQL/README.md)
