@@ -20,6 +20,10 @@
 
 ## [Стиль программирования Джо Селко на SQL](/Lib/Джо_Селко_Стиль_программирования_Джо_Селко_на_SQL_2006.doc)
 
+## [Е.П.Моргунов PostgreSQL. Основы языка SQL](/Lib/PostgreSQL._Основы_языка_SQL.pdf)
+
+## [Жао Элис SQL. Pocket guide](/Lib/SQL_Pocket_guide.pdf)
+
 # Ссылки в работу
 
 ## [Упражнения по SQL](https://www.sql-ex.ru/)
