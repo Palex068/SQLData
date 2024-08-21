@@ -40,3 +40,12 @@
 + [5.3 Подзапрос как источник данных](/SQL_Data/05.md#53-подзапрос-как-источник-данных)
 + [5.4 Практика](/SQL_Data/05.md#54-практика)
 
+## [6. Соединение таблиц](/SQL_Data/06.md)
+
++ [6.1 Ключи и связи](/SQL_Data/06.md#61-ключи-и-связи)
++ [6.2 INNER JOIN](/SQL_Data/06.md#62-inner-join)
++ [6.3 LEFT JOIN, RIGHT JOIN](/SQL_Data/06.md#63-left-join-right-join)
++ [6.4 FULL JOIN](/SQL_Data/06.md#64-full-join)
++ [6.5 Практика](/SQL_Data/06.md#65-практика)
+
+## [7. Финальное задание](/SQL_Data/07.md)
