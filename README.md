@@ -1,16 +1,23 @@
 # SQLData
 
-## ["Поколение Python": базы данных и SQL для начинающих](/SQL_for_beginners/README.MD)
-
-![00](/Lib/img/01_01.jpg)
+## [Марафон данных: первое знакомство с SQL и Python](/Data_Marathon/README.md)
 
 ## [GB Базы данных и SQL](/GB_SQL/README.md)
 
+## [Introduction to SQL (Введение в SQL)](/Introduction_to_SQL/) в процессе...
+
 ## [S21 SQL bootcamp](/S21_SQL_Bootcamp/README.md)
+
+## [SQL База](/SQL_Data/README.md)
+
+## ["Поколение Python": базы данных и SQL для начинающих](/SQL_for_beginners/README.MD) в процессе...
 
 ## [Интерактивный тренажер по SQL](/SQL_Simulator/README.MD)
 
-![00](/Lib/img/01_04.png)
+## [SQL практикум. Полный курс](/SQL_workshop/README.md) в процессе...
+
+![00](/Lib/img/01_01.jpg)
+
 
 # Материалы
 
@@ -18,7 +25,11 @@
 
 ## [Управление данными Учебное пособие для студентов заочного факультета](/Lib/Data_management/README.md)
 
+![00](/Lib/img/01_04.png)
+
 # Литература
+
+## [Руководство по проектированию баз данных](/Lib/Relational_database_desig_guide/README.md)
 
 ## [Стиль программирования Джо Селко на SQL](/Lib/Джо_Селко_Стиль_программирования_Джо_Селко_на_SQL_2006.doc)
 
@@ -28,9 +39,15 @@
 
 # Статьи 
 
+## [Индексы в реляционной базе данных](/Lib/Indexes_in_a_relational_database/README.md)
 ## [Зачем нам UML? Или как сохранить себе нервы и время](https://habr.com/ru/articles/458680/)
+## [Руководство по проектированию реляционных баз данных. Каскадное удаление данных](https://habr.com/ru/articles/194738/)
 
 # Ссылки в работу
+
+## [citforum.ru: Базы данных](http://citforum.ru/database/)
+
+## [Основы современных баз данных](http://citforum.ru/database/osbd/contents.shtml)
 
 ## [Упражнения по SQL](https://www.sql-ex.ru/)
 
@@ -42,8 +59,6 @@
 
 ## [Часть первая. Понимание джойнов сломано.](https://habr.com/ru/articles/448072/)
 ## [Часть вторая. Попытка альтернативной визуализации.](https://habr.com/ru/post/450528/)
-
-## [Руководство по проектированию реляционных баз данных (1-3 часть из 15)](https://habr.com/ru/articles/193136/)
 
 ![00](/Lib/img/01_02.jpeg)
 
