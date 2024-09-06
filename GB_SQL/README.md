@@ -153,9 +153,13 @@
 
 ## [Курс базы данных и SQL. Лекции 3 и 4](https://www.notion.so/SQL-3-4-24c36a824b2c426db1e9394f098790ba?pvs=21)
 
-[Курс базы данных и SQL. Лекция 5 ](https://www.notion.so/SQL-5-2c54746de12c4569a24c384eb97bc2aa?pvs=21) 
+## [Курс базы данных и SQL. Лекция 5 ](https://www.notion.so/SQL-5-2c54746de12c4569a24c384eb97bc2aa?pvs=21) 
 
-[Курс базы данных и SQL. Лекция 6](https://www.notion.so/SQL-6-b9de1ad4a4ed4da4be0640a9fe11c96b?pvs=21)
+## [Курс базы данных и SQL. Лекция 6](https://www.notion.so/SQL-6-b9de1ad4a4ed4da4be0640a9fe11c96b?pvs=21)
+
+## [Индексы и ключи](/GB_SQL/07.md)
+
+## [Проектирование БД](/GB_SQL/08.md)
 
 ### Дополнительные материалы к курсу:
 
