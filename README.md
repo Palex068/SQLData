@@ -45,6 +45,8 @@
 
 # Ссылки в работу
 
+## [Курс лекций: Основы технологий баз данных](https://postgrespro.ru/education/university/dbtech)
+
 ## [citforum.ru: Базы данных](http://citforum.ru/database/)
 
 ## [Основы современных баз данных](http://citforum.ru/database/osbd/contents.shtml)
