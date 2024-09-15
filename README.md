@@ -45,6 +45,8 @@
 
 # Ссылки в работу
 
+## [Документация к PostgreSQL 16.4](https://postgrespro.ru/docs/postgresql/16/index)
+
 ## [Курс лекций: Основы технологий баз данных](https://postgrespro.ru/education/university/dbtech)
 
 ## [citforum.ru: Базы данных](http://citforum.ru/database/)
